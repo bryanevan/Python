@@ -11,7 +11,6 @@
 3. [Create a Python Script](#create-a-python-script)
 4. [Set Up IPython Shell](#set-up-ipython-shell)
 5. [Export a Requirements File](#export-a-requirements-file)
-6. [Create a Github Repo](#create-a-github-repo)
 
 ## Install Python
 
