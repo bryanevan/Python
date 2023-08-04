@@ -1,0 +1,19 @@
+### Exercise 1.1: Getting Started with Python
+
+Learning Goals
+
+- Summarize the uses and benefits of Python for web development
+- Prepare your developer environment for programming with Python
+
+Reflection Questions
+
+- In your own words, what is the difference between frontend and backend web development? If you were hired to work on backend programming for a web application, what kinds of operations would you be working on?
+    - Frontend development deals with everything that users see and interact with on a website, this includes; all UI/UX elements; style of the aforementioned; vibe & feel.
+    - Backend development deals with server-side configuration, business logic (models), and databases that house all neccessary data for the software.
+        - Working as a backend dev includes: handling data storage and retrieval using databases; managing user authentication; setting up and managing server configurations with web servers; integrating external APIs.
+- Imagine you’re working as a full-stack developer in the near future. Your team is asking for your advice on whether to use JavaScript or Python for a project, and you think Python would be the better choice. How would you explain the similarities and differences between the two languages to your team? Drawing from what you learned in this Exercise, what reasons would you give to convince your team that Python is the better option?
+    - They’re fairly similar in general ways such as both are; object-oriented; scripting languages; have loads of community support and documentation; are quite versatile. The biggest reason why I put my weight in Python is due to its readability and convenient packages with ready to use tools and a stellar management system (pip). Primarily, it’s super elegant and readable which will reduce our team’s ET2Cs; moreover, it will reduce our drag, and make us more efficient as a team.
+- Now that you’ve had an introduction to Python, write down 3 goals you have for yourself and your learning during this Achievement. You can reflect on the following questions if it helps you. What do you want to learn about Python? What do you want to get out of this Achievement? Where or what do you see yourself working on after you complete this Achievement?
+    1. Get proficient at database configuration and structures.
+    2. Get proficient at integratin business logic into a piece of software.
+    3. Build a chat app using Django.
