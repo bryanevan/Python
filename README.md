@@ -57,8 +57,6 @@ Generate a “requirements.txt” file from your source environment. Next, creat
 
 ![Step 5](./exercise_1.1/step5.png)
 
-1. [Exercise 1.2](#exercise-1.2)
-
 # Exercise 1.2
 
 ## Table of Contents
