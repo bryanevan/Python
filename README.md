@@ -1,6 +1,7 @@
 # Table of Contents
 
 1. [Exercise 1.1](#exercise-1.1)
+2. [Exercise 1.2](#exercise-1.2)
 
 # Exercise 1.1
 
