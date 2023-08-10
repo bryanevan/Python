@@ -1,7 +1,7 @@
 # Table of Contents
 
 1. [Exercise 1.1](#exercise-1.1)
-2. [Exercise 1.2](#exercise-1.2)
+2. [Exercise 2](#exercise-2)
 
 # Exercise 1.1
 
@@ -57,7 +57,7 @@ Generate a “requirements.txt” file from your source environment. Next, creat
 
 ![Step 5](./exercise_1.1/step5.png)
 
-# Exercise 1.2
+# Exercise 2
 
 ## Table of Contents
 
