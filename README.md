@@ -1,8 +1,8 @@
 # Table of Contents
 
-1. [Exercise 1](#exercise-1)
+1. [Exercise 1.1](#exercise-1.1)
 
-# Exercise 1
+# Exercise 1.1
 
 ## Table of Contents
 
@@ -55,3 +55,50 @@ Set up an IPython shell in the virtual environment "cf-python-base". An IPython 
 Generate a “requirements.txt” file from your source environment. Next, create a new environment called “cf-python-copy”. In this new environment, install packages from the “requirements.txt” file.
 
 ![Step 5](./exercise_1.1/step5.png)
+
+1. [Exercise 1.2](#exercise-1.2)
+
+# Exercise 1.2
+
+## Table of Contents
+
+1. [Create the Data Structure](#create-the-data-structure)
+2. [Create recipe_1](#create-recipe_1)
+3. [Create Outer Structure](#create-outer-structure)
+4. [Create 4 More Recipes](#create-4-more-recipes)
+5. [Print Ingredient Lists](#print-ingredient-lists)
+
+6. ## Create the Data Structure
+
+  - Create a structure named recipe_1 that contains the following keys:
+  - name (str): Contains the name of the recipe
+  - cooking_time (int): Contains the cooking time in minutes
+  - ingredients (list): Contains a number of ingredients, each of the str data type
+
+![step 1](./exercise_1.2/step1.png)
+
+_A dictionary is suitable because it provides a key-value structure to associate recipe attributes. It allows easy access to specific information using keys. Dictionaries support different data types, accommodating strings, integers, and lists for recipe name, cooking time, and ingredients, respectively. The structure maintains organization and consistency, particularly useful when storing multiple recipes in a container like a list. Overall, using a dictionary facilitates convenient manipulation and structured access to recipe data, enabling further operations and analysis._
+
+## Create recipe_1
+
+![step 2](./exercise_1.2/step2.png)
+
+## Create outer Structure
+
+Create an outer structure called all_recipes, and then add recipe_1 to it.
+
+![step 3](./exercise_1.2/step3.png)
+
+_Using a list provides a sequential and dynamic structure, allowing easy modification and retrieval of recipes based on their order. Lists support iteration and indexing, enabling convenient operations on individual recipes or the entire collection. The versatility of lists accommodates recipes of varying lengths and complexities, making it suitable for a diverse range of recipe structures. Overall, a list provides the flexibility, scalability, and ease of access required for managing and modifying multiple recipes._
+
+## Create 4 More Recipes
+
+Generate 4 more recipes as recipe_2, recipe_3, recipe_4, and recipe_5, and then add them as well to all_recipes.
+
+![step 4](./exercise_1.2/step4.png)
+
+## Print Ingredient Lists
+
+Print the ingredients of each recipe as five different lists, inside the IPython shell.
+
+![step 5](./exercise_1.2/step5.png)
