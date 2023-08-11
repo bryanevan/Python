@@ -1,7 +1,9 @@
 # Table of Contents
+# Achievement 1
 
 1. [Exercise 1](#exercise-1)
 2. [Exercise 2](#exercise-2)
+3. [Exercise 3](#exercise-3)
 
 # Exercise 1
 
@@ -101,3 +103,73 @@ Generate 4 more recipes as recipe_2, recipe_3, recipe_4, and recipe_5, and then 
 Print the ingredients of each recipe as five different lists, inside the IPython shell.
 
 ![step 5](./exercise_1.2/step5.png)
+
+# Exercise 3
+
+## Table of Contents
+
+1. [Create a New Python Script](#create-a-new-python-script)
+2. [Initialize Two Empty Lists](#initialize-two-empty-lists)
+3. [Define a Function](#define-a-function)
+4. [Get The Number of New Recipes](#get-the-number-of-new-recipes)
+5. [Check Ingredients and Add Recipes](#check-ingredients-and-add-recipes)
+6. [Assign Difficulty Levels and Display Recipes](#assign-difficulty-levles-and-display-recipes)
+7. [Display All Ingredients](#display-all-ingredients)
+
+## Create a New Python Script
+## Initialize Two Empty Lists
+
+Open a Python script in an editor of your choice and name it “Exercise_1.3.py”.
+Initialize two empty lists: recipes_list and ingredients_list.
+![step 1](./exercise_1.3/step1&2.png)
+
+## Define a Function
+
+Define a function called `take_recipe`, which takes input from the user for the following variables:
+
+- `name` (str): Stores the name of the recipe.
+- `cooking_time` (int): Stores the cooking time (in minutes).
+- `ingredients` (list): A list that stores ingredients, each of the string data type.
+- `recipe` (dictionary): Stores the `name`, `cooking_time`, and `ingredients` variables (e.g., `recipe = {'name': name, 'cooking_time': cooking_time, 'ingredients': ingredients}`).
+
+![step 3](./exercise_1.3/step3.png)
+
+## Get the Number of New Recipes
+
+Ask the user how many recipes they would like to enter. Their response will be linked to a variable n.
+
+![step 4](./exercise_1.3/step4.png)
+
+## Check Ingredients and Add Recipes
+
+Run a for loop, which runs n times to perform the following steps:
+
+- Run `take_recipe()` and store its return output (a dictionary) in a variable called **recipe**.
+- Run another for loop inside this loop, which iterates through recipe’s ingredients list, where it picks out elements one-by-one as ingredient. It will run the following step inside: if the chosen ingredient isn’t present in ingredients_list, add it to this list.
+- Once finished adding ingredients, append recipe to recipes_list.
+
+![step 5](./exercise_1.3/step5.png)
+
+## Assign Difficulty Levels and Display Recipes
+
+Run another for loop that iterates through the recipes_list and assign a difficulty level based on the following criteria:
+
+- If cooking_time is less than 10 minutes, and the number of ingredients is less than 4, set a variable called difficulty to the value of **Easy**.
+- If cooking_time is less than 10 minutes, and the number of ingredients is greater than or equal to 4, set a variable called difficulty to the value of **Medium**.
+- If cooking_time is greater than or equal to 10 minutes, and the number of ingredients is less than 4, set a variable called difficulty to the value of **Intermediate**.
+- If cooking_time is greater than or equal to 10 minutes, and the number of ingredients is greater than or equal to 4, set a variable called difficulty to the value of **Hard**.
+
+Display each recipe in the following format:
+
+- Recipe:
+- Cooking Time (min):
+- Ingredients:
+- Difficulty level:
+
+![step 6](./exercise_1.3/step6.png)
+
+## Display All Ingredients
+
+Display all the ingredients that you’ve come across so far in all of the recipes that you’ve entered.
+
+![step 7](./exercise_1.3/step7.png)
