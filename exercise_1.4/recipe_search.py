@@ -1,5 +1,6 @@
 import pickle
 
+
 def display_recipe(recipe):
     print("Recipe Name:", recipe["name"])
     print("Cooking Time:", recipe["cooking_time"], "minutes")
@@ -7,14 +8,15 @@ def display_recipe(recipe):
     for ingredient in recipe["ingredients"]:
         print("-", ingredient)
     print("Difficulty:", recipe["difficulty"])
-    print("-" * 30)  
+    print("-" * 30)
+
 
 def search_ingredient(data):
     # print the list of ingredients
     print("Available ingredients:")
     for index, ingredient in enumerate(data["all_ingredients"]):
         print(index, ingredient)
-    print("-" * 30)  
+    print("-" * 30)
     # ask user for the ingredient they want to search for
     try:
         ingredient_searched = data["all_ingredients"][
