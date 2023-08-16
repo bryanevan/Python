@@ -4,6 +4,9 @@
 1. [Exercise 1](#exercise-1)
 2. [Exercise 2](#exercise-2)
 3. [Exercise 3](#exercise-3)
+4. [Exercise 4 Part 1](#exercise-4-part-1)
+5. [Exercise 4 Part 2](#exercise-4-part-2)
+6. [Exercise 4 Part 3](#exercise-4-part-3)
 
 # Exercise 1
 
@@ -173,3 +176,151 @@ Display each recipe in the following format:
 Display all the ingredients that you’ve come across so far in all of the recipes that you’ve entered.
 
 ![step 7](./exercise_1.3/step7.png)
+
+# Exercise 4 Part 1
+
+## Table of Contents
+
+1. [Import Pickle Module](#import-pickle-module)
+2. [Define the Take Recipe Function](#define-the-take-recipe-function)
+3. [Define the Calc Difficulty Function](#define-the-calc-difficulty-function)
+4. [Try To Open a File](#try-to-open-a-file)
+5. [Take Additional Recipes](#take-additional-recipes)
+6. [Create the Data Dictionary](#create-the-data-dictionary)
+7. [Save Data to a File](#save-data-to-a-file)
+
+## Import Pickle Module
+
+![step 1](./exercise_1.4/p1step1.png)
+
+## Define the Take Recipe Function
+
+Define a function called `take_recipe()` to take recipes from the user, which performs the following operations:
+
+- Taking in the recipe name, cooking time, and ingredients from the user.
+- Calculating the difficulty of the recipe by calling the `calc_difficulty()` function.
+- Gathering all these attributes into a dictionary and returning it.
+
+![step 2](./exercise_1.4/p1step2.png)
+
+## Define the Calc Difficulty Function
+
+Define the function `calc_difficulty()`, where the difficulty is returned as **Easy**, **Medium**, **Intermediate** or **Hard** based on the following logic:
+
+- If cooking_time is less than 10 minutes and the number of ingredients is less than 4, set a variable called difficulty to the value of **Easy**.
+- If cooking_time is less than 10 minutes and the number of ingredients is greater than or equal to 4, set a variable called difficulty to **Medium**.
+- If cooking_time is greater than or equal to 10 minutes and the number of ingredients is less than 4, set a variable called difficulty to the value of **Intermediate**.
+- If cooking_time is greater than or equal to 10 minutes and the number of ingredients is greater than or equal to 4, set a variable called difficulty to **Hard**.
+
+![step 3](./exercise_1.4/p1step3.png)
+
+## Try To Open a File
+
+Have a user enter a filename which would attempt to open a binary file in read mode, then define a try-except-else-finally block as follows:
+
+- The **try** block will open the given file, and load its contents through the pickle module into a variable called data. The incoming data is expected to be a dictionary containing two key-value pairs:
+  - recipes_list (a list of all recipes)
+  - all_ingredients (a list of all ingredients across all recipes)
+- An **except** clause handles the FileNotFoundError exception if a file with the given name isn’t found. The code block after will create a new dictionary called data, which contains the recipes list under the key recipes_list and another list containing all the ingredients under all_ingredients.
+- Another **except** clause that handles other exceptions and performs the same operations as the first except block.
+- An **else** block that closes the file stream that would’ve been opened in the try block.
+- A **finally** block that extracts the values from the dictionary into two separate lists: recipes_list and all_ingredients.
+
+![step 4](./exercise_1.4/p1step4.png)
+
+## Take Additional Recipes
+
+Ask the user how many recipes they’d like to enter, and define a for loop that calls the `take_recipe()` function. Append the output of this function into **recipes_list**. Next, define an inner loop that scans through the recipe’s ingredients and adds them to **all_ingredients** if they’re not already there.
+
+![step 5](./exercise_1.4/p1step5.png)
+
+## Create the Data Dictionary
+
+Gather the updated `recipes_list` and `all_ingredients` into the dictionary called **data**.
+
+![step 6](./exercise_1.4/p1step6.png)
+
+## Save Data to a File
+
+Open a user-defined binary file and write `data` to it using the pickle module.
+
+![step 7](./exercise_1.4/p1step7.png)
+
+# Exercise 4 Part 2
+
+## Table of Contents
+
+1. [Import the Pickle Module](#import-the-pickle-module)
+2. [Define the Display Recipe Function](#define-the-display-recipe-function)
+3. [Define the Search Ingredient Function](#define-the-search-ingredient-function)
+4. [Ask User for Recipe File](#ask-user-for-recipe-file)
+5. [Try To Open User File](#try-to-open-user-file)
+6. [Create Except Block](#create-except-block)
+7. [Create Else Block](#create-else-block)
+
+## Import the Pickle Module
+
+Import the pickle module:
+
+![step 1](./exercise_1.4/p2step1.png)
+
+## Define the Display Recipe Function
+
+The function should take in one recipe (of the dictionary type) as an argument and print all of its attributes including the recipe name, cooking time, ingredients, and difficulty.
+
+![step 2](./exercise_1.4/p2step2.png)
+
+## Define the Search Ingredient Function
+
+The function takes in a dictionary called data as its argument. The function will perform the following steps:
+
+- First, it shows the user all the available ingredients contained in data, under the key all_ingredients. Each ingredient is displayed with a number (take the index of each ingredient for this purpose using the enumerate() function).
+- Define a try block where the user gets to pick a number from this list. This number is used as the index to retrieve the corresponding ingredient, which is then stored into a variable called ingredient_searched.
+- Make an except clause that warns the user if the input is incorrect.
+- Add an else clause that goes through every recipe in data (hint: recipes_list is the key that holds every recipe). Each recipe that contains the given ingredient will be printed.
+
+![step 3](./exercise_1.4/p2step3.png)
+
+## Ask User for Recipe File
+
+Ask the user for the name of the file that contains your recipe data.
+
+![step 4](./exercise_1.4/p2step4.png)
+
+## Try To Open User File
+
+Use a `try` block to open the file, and then extract its contents into **data** (from Step 3) using the pickle module.
+
+![step 5](./exercise_1.4/p2step5.png)
+
+## Create Except Block
+
+For when the try block fails, add an `except` block to warn the user that the file hasn’t been found.
+
+![step 6](./exercise_1.4/p2step6.png)
+
+## Create Else Block
+
+Define an `else` block that calls `search_ingredient()` while passing `data` into it as an argument.
+
+![step 7](./exercise_1.4/p2step7.png)
+
+# Exercise 4 Part 3
+
+## Table of Contents
+
+1. [Run the Input Script](#run-the-input-script)
+2. [Run the Search Script](#run-the-search-script)
+
+## Run the Input Script
+
+Run “recipe_input.py” and enter a few sample recipes of your choice. Make sure the script can generate a binary file after execution.
+
+![step 1a](./exercise_1.4/p3step1.png)
+
+## Run the Search Script
+
+Run “recipe_search.py”, enter the ingredient to be searched for, and make sure you get the desired output with the relevant recipes.
+
+![step 2](./exercise_1.4/p3step2.png)
+
