@@ -324,3 +324,83 @@ Run “recipe_search.py”, enter the ingredient to be searched for, and make su
 
 ![step 2](./exercise_1.4/p3step2.png)
 
+# Exercise 5
+
+## Table of Contents
+
+1. [Define Recipe Class](#define-recipe-class)
+2. [Define Methods](#define-methods)
+3. [Create Recipe Search Method](#create-recipe-search-method)
+4. [Create a Tea Object](#create-a-tea-object)
+5. [Create More Recipes](#creat-more-recipes)
+6. [Create Recipes List](#create-recipes-list)
+7. [Search for Recipes](#search-for-recipes)
+8. [Run the Script](#run-the-script)
+
+## Define Recipe Class
+
+Define a class Recipe, with the following data attributes:
+
+- name: the name of a recipe
+- ingredients: a list containing the ingredients for a recipe
+- cooking_time: the time taken in minutes to carry out a recipe
+- difficulty: an auto-generated attribute that says whether the recipe is Easy, Medium, Intermediate, or Hard
+
+![step 1](./exercise_1.5/step1.png)
+
+## Define Methods
+
+Defined the following methods:
+
+- An initialization method that takes in the name for the recipe and initializes the other data attributes too. Getter and setter methods for name and cooking_time.
+- A method called `add_ingredients()` that takes in variable-length arguments. The method should take in these ingredients and add them to ingredients. Once all the ingredients are added, this function calls `update_all_ingredients()`
+- A getter method for ingredients that returns the list itself.
+- A method called `calculate_difficulty()` and updates the difficulty of the recipe.
+- A getter method for difficulty which also calls `calculate_difficulty()` if difficulty hasn’t been calculated.
+- A search method called `search_ingredient()` that takes an ingredient as an argument, searches for it in the recipe, and returns True or False appropriately.
+- A method called `update_all_ingredients()` that goes through the current object’s ingredients and adds them to a class variable called `all_ingredients`, if they’re not already present. This class variable keeps track of all the ingredients that exist across all recipes.
+- A string representation that prints the entire recipe over a well formatted string.
+
+![step 2](./exercise_1.5/step2.png)
+
+## Create Recipe Search Method
+
+Define a `recipe_search()` method that takes 2 parameters:
+
+- data: takes in a list of Recipe objects to search from
+- search_term: the ingredient to be searched for
+  Run a for loop that transverses through `data` and performs the following steps:
+- Within the object that is in focus, call the `search_ingredient` method to see if the ingredient is present or not.
+- If the above condition is satisfied, print the recipe.
+
+![step 3](./exercise_1.5/step3.png)
+
+## Create a Tea Object
+
+In the main code, make an object under the main Recipe class for Tea
+
+![step 4](./exercise_1.5/step4.png)
+
+## Create More Recipes
+
+Create Coffee, Cake, and Banana Smoothie recipes.
+
+![step 5](./exercise_1.5/step5.png)
+
+## Create Recipes List
+
+Wrap the recipes into a list called `recipes_list`.
+
+![step 6](./exercise_1.5/step6.png)
+
+## Search for Recipes
+
+Use the `recipe_search()` method to search for recipes that contain each ingredient out of: Water, Sugar, Bananas.
+
+![step 7](./exercise_1.5/step7.png)
+
+## Run the Script
+
+Run “recipe_oop.py” and take screenshots of its execution.
+
+![step 8 part 2](./exercise_1.5/terminal.png)
