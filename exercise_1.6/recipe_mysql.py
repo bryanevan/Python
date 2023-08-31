@@ -23,8 +23,11 @@ cur.execute(
     ")"
 )
 
+
+# spacer for readability
 def space():
     print("-"*35)
+
 
 # Main menu function.
 def main_menu(conn, cur):
