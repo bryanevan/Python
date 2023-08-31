@@ -564,19 +564,19 @@ Fetch all the recipes that are present on the database and list them to the user
 
 Once the user selects the column that needs an update, collect the new value from the user.
 
-![step 2](./exercise_1.6/p5steps2.png)
+![step 2](./exercise_1.6/p5step2.png)
 
 ## Build Queries
 
 Build your query in the form of a string, to update an entry on the table for the given id, column, and updated value. Note that if the user is updating either cooking_time or ingredients, the script will have to recalculate the difficulty of the recipe, then update that column as well (make a separate query for this).
 
-![step 3](./exercise_1.6/p5steps3-4.png)
+![step 3](./exercise_1.6/p5step3.png)
 
 ## Execute Queries and Commit Changes
 
 Execute this query and commit your changes to the table.
 
-![step 4](./exercise_1.6/p5steps3-4.png)
+![step 4](./exercise_1.6/p5step3.png)
 
 # Exercise 6 Part 6
 
