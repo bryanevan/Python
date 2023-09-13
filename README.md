@@ -848,4 +848,4 @@ Exit the application through the main menu
 ## Exit
 
 Exit the Script
-![step 6](./exercise_1.6/p7step6.png)
+![step 6](./exercise_1.7/p5step6.png)
