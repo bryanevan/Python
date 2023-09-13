@@ -663,25 +663,25 @@ Delete a Recipe
 
 Open a script file called **recipe_app.py**.
 
-![step 1](./exercise_1.7/p1step1.jpg)
+![step 1](./exercise_1.7/p1step1.png)
 
 ## Imports
 
 Import all the packages and methods necessary to build your application.
 
-![step 2](./exercise_1.7/p1step2.jpg)
+![step 2](./exercise_1.7/p1step2.png)
 
 ## Create Engine
 
 Create an engine object called engine that connects to your desired database.
 
-![step 3](./exercise_1.7/p1step4.jpg)
+![step 3](./exercise_1.7/p1step4.png)
 
 ## Create the Session Object
 
 Create the session object. Generate the **Session** class, **bind** it to the **engine**, and initialize the session object.
 
-![step 4](./exercise_1.7/p1step5.jpg)
+![step 4](./exercise_1.7/p1step5.png)
 
 # Exercise 7 Part 2
 
@@ -700,13 +700,13 @@ Create the session object. Generate the **Session** class, **bind** it to the **
 
 The **Recipe** class should inherit the **Base** class
 
-![step 1](./exercise_1.7/p2step1.jpg)
+![step 1](./exercise_1.7/p2step1.png)
 
 ## Set the Table Name
 
 Define an attribute to set the table’s name as **final_recipes**.
 
-![step 2](./exercise_1.7/p2step2.jpg)
+![step 2](./exercise_1.7/p2step2.png)
 
 ## Create Table Columns
 
@@ -718,37 +718,37 @@ Define these attributes to create columns in your table:
 - cooking_time: integer; stores the recipe’s cooking time in minutes
 - difficulty: string with 20-character limit; stores one of four strings that describe the difficulty of the recipe (Easy, Medium, Intermediate, and Hard).
 
-![step 3](./exercise_1.7/p2step3.jpg)
+![step 3](./exercise_1.7/p2step3.png)
 
 ## REPR Method
 
 Define a **repr** method that shows a quick representation of the recipe, including the id, name, and difficulty.
 
-![step 4](./exercise_1.7/p2step4.jpg)
+![step 4](./exercise_1.7/p2step4.png)
 
 ## STR Method
 
 Define a **str** method that prints a well-formatted version of the recipe.
 
-![step 5](./exercise_1.7/p2step5.jpg)
+![step 5](./exercise_1.7/p2step5.png)
 
 ## Calculate Recipe Difficulty
 
 Define a method called `calculate_difficulty()` to calculate the difficulty of a recipe based on the number of ingredients and cooking time.
 
-![step 6](./exercise_1.7/p2step6.jpg)
+![step 6](./exercise_1.7/p2step6.png)
 
 ## Retrieve Ingredients
 
 Define a method that retrieves the ingredients string inside your Recipe object as a list, called `return_ingredients_as_list()`.
 
-![step 7](./exercise_1.7/p2step7.jpg)
+![step 7](./exercise_1.7/p2step7.png)
 
 ## Create the Table
 
 Create the table on the database using the `create_all()` method from `Base.metadata`.
 
-![step 8](./exercise_1.7/p2step8.jpg)
+![step 8](./exercise_1.7/p2step8.png)
 
 # Exercise 7 Part 3
 
@@ -764,31 +764,31 @@ Create the table on the database using the `create_all()` method from `Base.meta
 
 Function 1: create_recipe()
 
-![step 1](./exercise_1.7/p3step1.jpg)
+![step 1](./exercise_1.7/p3step1.png)
 
 ## View All Recipes Function
 
 Function 2: view_all_recipes()
 
-![step 2](./exercise_1.7/p3step2.jpg)
+![step 2](./exercise_1.7/p3step2.png)
 
 ## Search By Ingredient Function
 
 Function 3: search_by_ingredients()
 
-![step 3](./exercise_1.7/p3step3.jpg)
+![step 3](./exercise_1.7/p3step3.png)
 
 ## Edit Recipe Function
 
 Function 4: edit_recipe()
 
-![step 4](./exercise_1.7/p3step4.jpg)
+![step 4](./exercise_1.7/p3step4.png)
 
 ## Delete Recipe Function
 
 Function 5: delete_recipe()
 
-![step 5](./exercise_1.7/p3step5.jpg)
+![step 5](./exercise_1.7/p3step5.png)
 
 # Exercise 7 Part 4
 
@@ -796,7 +796,7 @@ Function 5: delete_recipe()
 
 Design the Main Menu. The main menu will be contained in a while loop, where the condition to exit the loop will be based on the user’s choice.
 
-![step 1](./exercise_1.7/p4step1.jpg)
+![step 1](./exercise_1.7/p4step1.png)
 
 # Exercise 7 Part 5
 
@@ -813,37 +813,37 @@ Design the Main Menu. The main menu will be contained in a while loop, where the
 
 Create a few recipes of your own through your application.
 
-![step 1](./exercise_1.7/p5step1.jpg)
+![step 1](./exercise_1.7/p5step1.png)
 
 ## View All Recipes
 
 View all recipes using the app.
 
-![step 2](./exercise_1.7/p5step2.jpg)
+![step 2](./exercise_1.7/p5step2.png)
 
 ## Search By Ingredients
 
 Search for recipes by ingredients using the app.
 
-![step 3](./exercise_1.7/p5step3.jpg)
+![step 3](./exercise_1.7/p5step3.png)
 
 ## Edit a Recipe
 
 Edit a recipe using the app.
 
-![step 4](./exercise_1.7/p5step4.jpg)
+![step 4](./exercise_1.7/p5step4.png)
 
 ## Delete a Recipe
 
 Delete a recipe using the app
 
-![step 5](./exercise_1.7/p5step5.jpg)
+![step 5](./exercise_1.7/p5step5.png)
 
 ## Exit the Application
 
 Exit the application through the main menu
 
-![step 6](./exercise_1.7/p5step6.jpg)
+![step 6](./exercise_1.7/p5step6.png)
 
 ## Exit
 
