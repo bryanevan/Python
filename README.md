@@ -844,8 +844,3 @@ Delete a recipe using the app
 Exit the application through the main menu
 
 ![step 6](./exercise_1.7/p5step6.png)
-
-## Exit
-
-Exit the Script
-![step 6](./exercise_1.7/p5step6.png)
