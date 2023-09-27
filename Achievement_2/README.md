@@ -35,11 +35,11 @@ While in virtual environment achievement1-practice, pip install django and check
 
 1. [Create A2_Recipe_App Folder](#create-a2_recipe_app-folder)
 2. [Create a2-ve-recipeapp Virtual Environment](#Create-a2-ve-recipeapp-virtual-environment)
-3. [Install Django in Virtual Environment](install-django-in-virtual-environment)
-4. [Create Django Project Named recipe_project](create-django-project-named-recipe_project)
-5. [Rename recipe_project Project Directory src](rename-recipe_project-project-directory-src)
-6. [Run Migrations and Run Rerver](run-migrations-and-run-sever)
-7. [Create SuperUser and Sign In](create-superuser-and-sign-in)
+3. [Install Django in Virtual Environment](#install-django-in-virtual-environment)
+4. [Create Django Project Named recipe_project](#create-django-project-named-recipe_project)
+5. [Rename recipe_project Project Directory src](#rename-recipe_project-project-directory-src)
+6. [Run Migrations and Run Rerver](#run-migrations-and-run-sever)
+7. [Create SuperUser and Sign In](#create-superuser-and-sign-in)
 
 # Create A2_Recipe_App Folder
 
