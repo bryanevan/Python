@@ -4,6 +4,7 @@
 
 1. [Exercise 1](#exercise-1)
 2. [Exercise 2](#exercise-2)
+3. [Exercise 3](#exercise-3)
 
 # Exercise 1
 
@@ -69,3 +70,36 @@ While in virtual environment achievement1-practice, pip install django and check
 # Create SuperUser and Sign In
 
 ![Step7](exercise_2.2/screenshots/admin-dashboard.jpg)
+
+# Exercise 3
+
+# Table of Contents
+
+1. [Create App Schema](#create-app-schema)
+2. [Establish Project Structure](#establish-project-structure)
+3. [Migrate Models](#migrate-models)
+4. [Test Models](#test-models)
+
+# Create App Schema
+
+Identify the desired attributes of each entity and their relation with other entities.
+
+![Step_1](./exercise_2.3/screenshots/schema.jpg)
+
+# Establish Project Structure
+
+Create the apps drawn out in the schema and include links to projects in settings.py
+
+![Step_2](./exercise_2.3/screenshots/project-structure.jpg)
+
+# Migrate Models
+
+After building models within each app, register the models in their respective admin.py, then migrate.
+
+![Step_3](./exercise_2.3/screenshots/run-migrations.jpg)
+
+# Test Models
+
+Build tests for all apps, respectively; run tests.
+
+![Step_4](./exercise_2.3/screenshots/Test-Report.jpg)
