@@ -5,6 +5,7 @@
 1. [Exercise 1](#exercise-1)
 2. [Exercise 2](#exercise-2)
 3. [Exercise 3](#exercise-3)
+4. [Exercise 4](#exercise-4)
 
 # Exercise 1
 
@@ -103,3 +104,15 @@ After building models within each app, register the models in their respective a
 Build tests for all apps, respectively; run tests.
 
 ![Step_4](./exercise_2.3/screenshots/Test-Report.jpg)
+
+# Exercise 4
+
+# Table of Contents
+
+1. [Create Welcome Page](#creat-welcome-page)
+
+# Create Welcome Page
+
+Modify URLs to send user a welcome page with a basic outline.
+
+![Step_1](./exercise_2.4/src/screenshots/welcome.jpg)
