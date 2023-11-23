@@ -6,6 +6,7 @@
 2. [Exercise 2](#exercise-2)
 3. [Exercise 3](#exercise-3)
 4. [Exercise 4](#exercise-4)
+5. [Exercise 5](#exercise-5)
 
 # Exercise 1
 
@@ -43,63 +44,63 @@ While in virtual environment achievement1-practice, pip install django and check
 6. [Run Migrations and Run Rerver](#run-migrations-and-run-sever)
 7. [Create SuperUser and Sign In](#create-superuser-and-sign-in)
 
-# Create A2_Recipe_App Folder
+## Create A2_Recipe_App Folder
 
 ![Step_1](exercise_2.2/screenshots/step1.png)
 
-# Create a2-ve-recipeapp Virtual Environment
+## Create a2-ve-recipeapp Virtual Environment
 
 ![Step_2](exercise_2.2/screenshots/step2.png)
 
-# Install Django in Virtual Environment
+## Install Django in Virtual Environment
 
 ![Step_3](exercise_2.2/screenshots/step3.png)
 
-# Create Django Project Named recipe_project
+## Create Django Project Named recipe_project
 
 ![Step_4](exercise_2.2/screenshots/proj_contents_before_renaming.jpg)
 
-# Rename recipe_project Project Directory src
+## Rename recipe_project Project Directory src
 
 ![Step_5](exercise_2.2/screenshots/proj_contents_after_renaming.jpg)
 
-# Run Migrations and Run Rerver
+## Run Migrations and Run Rerver
 
 ![Step_6_1](exercise_2.2/screenshots/step6p1.png)
 ![Step_6_2](exercise_2.2/screenshots/step6p2.png)
 
-# Create SuperUser and Sign In
+## Create SuperUser and Sign In
 
 ![Step7](exercise_2.2/screenshots/admin-dashboard.jpg)
 
 # Exercise 3
 
-# Table of Contents
+## Table of Contents
 
 1. [Create App Schema](#create-app-schema)
 2. [Establish Project Structure](#establish-project-structure)
 3. [Migrate Models](#migrate-models)
 4. [Test Models](#test-models)
 
-# Create App Schema
+## Create App Schema
 
 Identify the desired attributes of each entity and their relation with other entities.
 
 ![Step_1](./exercise_2.3/screenshots/schema.jpg)
 
-# Establish Project Structure
+## Establish Project Structure
 
 Create the apps drawn out in the schema and include links to projects in settings.py
 
 ![Step_2](./exercise_2.3/screenshots/project-structure.jpg)
 
-# Migrate Models
+## Migrate Models
 
 After building models within each app, register the models in their respective admin.py, then migrate.
 
 ![Step_3](./exercise_2.3/screenshots/run-migrations.jpg)
 
-# Test Models
+## Test Models
 
 Build tests for all apps, respectively; run tests.
 
@@ -107,12 +108,49 @@ Build tests for all apps, respectively; run tests.
 
 # Exercise 4
 
-# Table of Contents
+## Table of Contents
 
 1. [Create Welcome Page](#creat-welcome-page)
 
-# Create Welcome Page
+## Create Welcome Page
 
 Modify URLs to send user a welcome page with a basic outline.
 
 ![Step_1](./exercise_2.4/src/screenshots/welcome.jpg)
+
+# Exercise 5
+
+## Table of Contents
+
+1. [Update Models](#update-models)
+2. [Add Records](#add-records)
+3. [Welcome Page](#welcome-page)
+4. [Recipe Details](#recipe-details)
+5. [Test](#test)
+
+## Update Models
+
+Update neccessary models.py to facilitate url paths.
+Update neccessary url.py for path logic.
+Update neccessary views.py for path and view logic.
+
+makemigrations, migrate, runserver
+
+## Add Records
+
+Download food images to a new media/recipes directory.
+Go into admin panel to update recipes with corresponding images.
+
+## Welcome Page
+
+Create Static directory, set up static routing is settings.py.
+
+Update welcome page for better UI/UX, add a button to route to recipe list view with recipes_list.html template.
+
+## Recipe Details
+
+Create recipes_details.html to display recipe details.
+
+## Test
+
+Test all links and ensure they pass.
