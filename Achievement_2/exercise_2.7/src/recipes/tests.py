@@ -10,6 +10,13 @@ from recipes.forms import RecipeSearchForm
 
 
 class RecipeModelTest(TestCase):
+    def setUp(self):
+        # Create a test user and log them in for the views requiring login
+        self.user = User.objects.create_user(
+            username="testuser", password="testpassword"
+        )
+        self.client.login(username="testuser", password="testpassword")
+
     def test_recipe_string_representation(self):
         recipe = Recipe.objects.create(
             id=1, title="Test Recipe", cooking_time=30, description="Test description"
