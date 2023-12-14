@@ -1,0 +1,106 @@
+TASK 2-7:
+
+Step 1: What should users be able to search for?
+ 
+ -Recipe Title
+ -Ingredients
+
+What would the output look like?
+
+ -Output should be a filtered recipe list showing all recipes that match the submitted search criteria
+ -Users should be able to export that list as a CSV file via pandas data frames.
+
+DATA ANALYSIS:
+
+1. Bar Chart (Horizontal Bar Chart):
+    -X-axis: Recipe Name
+    -Y-axis: Cooking Time
+
+2. Pie Chart:
+    Percentage of time it takes to cook each recipe in comparison to each other
+
+3. Line Chart:
+    -X-axis: Recipe Name
+    -Y-axis: Cooking Time
+
+EXECUTION FLOW
+
+1. User lands on homepage
+2. User logs in
+3. User searches for a recipe by name or ingredient
+4. User sees search results with an associated chart
+5. User exports recipe information via a CSV
+6. User checks recipe details
+7. User logs out.
+
+
+     +-----------------------+
+     |                       |
+     |   Homepage            |
+     |                       |
+     +-----------+-----------+
+                 |
+                 | Clicks "Log In"
+                 v
+     +-----------+-----------+
+     |                       |
+     |    Log In Page        |
+     |                       |
+     +-----------+-----------+
+                 |
+                 | Submits login details
+                 v
+     +-----------+-----------+
+     |                       |
+     |   User Dashboard      |
+     |                       |
+     +-----------+-----------+
+                 |
+                 | Enters recipe name or ingredient
+                 v
+     +-----------+-----------+
+     |                       |
+     |   Recipe Search       |
+     |                       |
+     +-----------+-----------+
+                 |
+                 | Displays search results
+                 v
+     +-----------+-----------+
+     |                       |
+     |   Search Results      |
+     |                       |
+     +-----------+-----------+
+                 |
+                 | Clicks on a recipe
+                 v
+     +-----------+-----------+
+     |                       |
+     |   Recipe Details      |
+     |                       |
+     +-----------+-----------+
+                 |
+                 | Clicks "Export to CSV"
+                 v
+     +-----------+-----------+
+     |                       |
+     |   Export to CSV       |
+     |                       |
+     +-----------+-----------+
+                 |
+                 | Exports recipe information
+                 v
+     +-----------+-----------+
+     |                       |
+     |   Recipe Details      |
+     |                       |
+     +-----------+-----------+
+                 |
+                 | Clicks "Log Out"
+                 v
+     +-----------+-----------+
+     |                       |
+     |   Logout Page         |
+     |                       |
+     +-----------------------+
+
