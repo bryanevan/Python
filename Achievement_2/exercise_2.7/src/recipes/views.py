@@ -1,7 +1,9 @@
 from io import BytesIO
 import base64
+import csv
 from typing import Any, Dict
 from django.shortcuts import render
+from django.shortcuts import get_object_or_404
 from django.views.generic import ListView, DetailView
 from .models import Recipe
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -165,6 +167,40 @@ def export_recipes_csv(request):
     response = HttpResponse(content_type="text/csv")
     response["Content-Disposition"] = 'attachment; filename="recipes.csv"'
     df.to_csv(path_or_buf=response, index=False)
+    return response
+
+
+def export_single_recipe_csv(request, recipe_id):
+    # Fetch the specific recipe
+    recipe = get_object_or_404(Recipe, pk=recipe_id)
+
+    # Create your CSV response
+    response = HttpResponse(content_type="text/csv")
+    response["Content-Disposition"] = f'attachment; filename="{recipe.title}.csv"'
+
+    writer = csv.writer(response)
+
+    # Write the headers
+    writer.writerow(
+        ["Title", "Cooking Time (min)", "Description", "Difficulty", "Ingredients"]
+    )
+
+    # Gather ingredients
+    ingredients = ", ".join(
+        [ingredient.name for ingredient in recipe.ingredients.all()]
+    )
+
+    # Write the recipe data
+    writer.writerow(
+        [
+            recipe.title,
+            recipe.cooking_time,
+            recipe.description,
+            recipe.difficulty,
+            ingredients,
+        ]
+    )
+
     return response
 
 

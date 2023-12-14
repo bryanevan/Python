@@ -4,6 +4,7 @@ from .views import (
     RecipesDetailView,
     RecipesListView,
     export_recipes_csv,
+    export_single_recipe_csv,
     generate_chart,
 )
 
@@ -15,4 +16,9 @@ urlpatterns = [
     path("recipes/<pk>", RecipesDetailView.as_view(), name="recipes_detail"),
     path("recipes/export/", export_recipes_csv, name="export_csv"),
     path("generate-chart/", generate_chart, name="generate_chart"),
+    path(
+        "export_single_recipe/<int:recipe_id>/",
+        export_single_recipe_csv,
+        name="export_single_recipe_csv",
+    ),
 ]
