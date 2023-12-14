@@ -8,6 +8,7 @@
 4. [Exercise 4](#exercise-4)
 5. [Exercise 5](#exercise-5)
 6. [Exercise 6](#exercise-6)
+7. [Exercise 7](#exercise-7)
 
 # Exercise 1
 
@@ -199,3 +200,40 @@ Authentication form is shown.
 User enters username and password.
 Information is authenticated and user is redirected to sales page.
 User logs out and returns to successful logout page.
+
+# Exercise 7
+
+## Table of Contents
+
+1. [Implement Search For Recipes](#implement-search-for-recipes)
+2. [Data Visualization](#data-visualization)
+3. [Write Tests](#write-tests)
+4. [Run Server and Capture Output](#run-server-and-capture-output)
+
+## Implement Search for Recipes
+
+    - Take some time to think of what you want users to search for, the criterion for search, and format of output. Create a new empty document and call it “Task-2.7”. Place your thoughts in this document. Save the document.
+    - Create a user form to allow your user to input the search criteria.
+    - Extract the data as QuerySet using the search criteria.
+    - Convert the QuerySet to pandas DataFrames (Ensure you have pandas installed).
+    - Display search results as a table.
+    - Ensure that the recipes returned by the search criteria are clickable and lead to the details page of the recipe.
+    - Bonus: Allow users to search on the basis of wild cards and partial search queries. For example, in the Bookstore application, this will mean that searching for “Pride and” will also return “Pride and Prejudice” book results.
+
+## Data Visualization
+
+    - In your “task-2.7” document, add a new heading named “Data Analysis”, and note down at least one visualization using a bar, pie, and line chart (at least one for each). For each of the scenarios, identify the x- and y- axes and labels (if any). Also determine if you want charts to be displayed based on user input or simply to provide them at your own discretion.
+    - Head to VSCode and ensure that you have matplotlib installed.
+    - Implement the charts that you shortlisted in 3a.
+
+## Write Tests
+
+    - Follow the same testing process (that you previously used for models and views) to test your new forms and views. For this, you can create classes like `RecipeFormTest`. Testing will need to include checking the fields for values, formats, or lengths, ensuring login protection of views, appropriate pagination, and any other checks you feel are relevant. As specified earlier, for smaller projects all your tests can be placed in the same file, but feel free to create separate files for each of them if you prefer. In each case, you’ll need to import the form or view that you want to test, create a class, specify the `setUp` and `setUpTestData` methods, and write tests.
+    - Run the tests with verbosity set to 2, and take a screenshot of the outcome in the terminal. Save the screenshot as “test-outcome.jpg”, or similar.
+
+## Run Server and Capture Output:
+
+    - Open “Task-2.7” and add a heading called “Execution flow”.
+    - Think of the user’s journey from the moment they land on the homepage, considering all the different navigation possibilities and search options. For example, a user lands on the homepage, logs in to the account, searches for a recipe based on a recent date, sees the plots, checks details, and then logs out. Represent this journey as a flow chart.
+    - Toggle the terminal ON in VSCode and do the following to run the server: Navigate to `A2_Recipe_App/src`, activate the virtual environment (`a2-ve-recipeapp`), and execute the `runserver` command.
+    - Head to the browser, and follow the user journey noted in 5b. At each step, note the URL and take a screenshot. Paste the screenshots in the “Task-2.7” document. Alternatively, you can create a screencast recording the journey using your favourite screen-recording tool. Save it by the name “user-journey.mp4” (or any other movie extension of your choice).
