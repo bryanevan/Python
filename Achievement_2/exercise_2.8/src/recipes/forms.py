@@ -14,7 +14,10 @@ class RecipeSearchForm(forms.Form):
         max_length=50,
         label="Recipe Name",
         widget=forms.TextInput(
-            attrs={"class": "form-item", "placeholder": "Enter a Recipe Name"}
+            attrs={
+                "class": "text-black" "form-item",
+                "placeholder": "Enter Recipe Name",
+            }
         ),
     )
     Ingredients = forms.ModelMultipleChoiceField(

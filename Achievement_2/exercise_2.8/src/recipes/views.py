@@ -20,6 +20,10 @@ def recipes_home(request):
     return render(request, "recipes/recipes_home.html")
 
 
+def about_view(request):
+    return render(request, "recipes/about.html")
+
+
 def render_chart(chart_type, data, **kwargs):
     plt.switch_backend("AGG")
     fig = plt.figure(figsize=(12, 8), dpi=100)
@@ -68,7 +72,7 @@ class RecipesListView(LoginRequiredMixin, ListView):
     model = Recipe
     template_name = "recipes/recipes_list.html"
     context_object_name = "recipes"
-    paginate_by = 10
+    paginate_by = 20
 
     def get_queryset(self):
         queryset = super().get_queryset()

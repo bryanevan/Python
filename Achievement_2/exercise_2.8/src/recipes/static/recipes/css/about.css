@@ -1,0 +1,8 @@
+.bgimage {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(50, 83, 61, 0.5)),
+    url("/static/recipes/images/about.jpg");
+}
+
+.font {
+  font-family: "Poppins", sans-serif;
+}

@@ -1,4 +1,4 @@
-{% load static %}
+{% load static tailwind_tags %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -6,128 +6,85 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
+    {% tailwind_css %}
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <style>
-      body {
-        font-family: "Poppins", sans-serif;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-        background-image: url("{% static 'recipes/images/recipe-welcome.jpg' %}");
-        background-size: cover;
-        background-position: center;
-      }
-
-      h2 {
-        color: #007bff;
-      }
-
-      .login-form {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 40px;
-        background-color: rgba(
-          255,
-          255,
-          255,
-          0.6
-        ); /* semi-transparent background */
-        border-radius: 4px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-        backdrop-filter: blur(10px);
-      }
-
-      .login-form input[type="text"],
-      .login-form input[type="password"] {
-        height: 40px;
-        border-radius: 6px;
-        border: 1px solid #ccc;
-        margin-bottom: 10px;
-        padding: 10px;
-        width: 100%;
-        box-sizing: border-box;
-      }
-
-      .login-form .buttons-container {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-      }
-
-      .login-form input[type="submit"] {
-        background-color: #007bff;
-        color: #fff;
-        border: none;
-        border-radius: 4px;
-        padding: 10px 20px;
-        font-size: 16px;
-        font-weight: 700;
-        cursor: pointer;
-      }
-
-      .login-form input[type="submit"]:hover {
-        background-color: #0069d9;
-      }
-
-      .login-form .cancel-button {
-        background-color: #d9534f;
-        color: #fff;
-        border: none;
-        border-radius: 4px;
-        padding: 10px 20px;
-        font-size: 16px;
-        font-weight: 700;
-        cursor: pointer;
-        display: inline-block;
-      }
-
-      .login-form .cancel-button:hover {
-        background-color: #c9302c;
-      }
-    </style>
+    <link rel="stylesheet" href="{% static 'auth/css/styles.css' %}" />
   </head>
   <body>
-    <div class="login-form">
-      <h2>Log In</h2>
-      <br />
-      <form id="loginForm" method="post" action="{% url 'login' %}">
-        {% csrf_token %}
-        <!-- Add your login form fields here -->
-        <input
-          type="text"
-          name="username"
-          placeholder="Username"
-          required
-        /><br />
-        <br />
-        <input
-          type="password"
-          name="password"
-          placeholder="Password"
-          required
-        />
-        <br />
-        <br />
-        <br />
-        <div class="buttons-container">
-          <input type="submit" value="Log In" class="login-button" />
-          <button class="cancel-button" onclick="redirectToHomepage()">
-            Cancel
-          </button>
-        </div>
-      </form>
+    <div class="relative w-full h-full flex items-center justify-center">
+      <img
+        src="/static/auth/images/login.jpg"
+        class="absolute w-full h-full object-cover object-center"
+      />
+      <div class="relative w-full max-w-xs">
+        <form
+          class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
+          id="loginForm"
+          method="post"
+          action="{% url 'login' %}"
+        >
+          {% csrf_token %}
+          <div class="mb-4">
+            <label
+              class="flex justify-center items-center border-b text-gray-700 text-lg font-bold mb-6"
+              for="username"
+            >
+              Login to your account
+            </label>
+          <div class="mb-4">
+            <label
+              class="block text-gray-700 text-sm font-bold mb-2"
+              for="username"
+            >
+              Username
+            </label>
+            <input
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              name="username"
+              type="text"
+              placeholder="Username"
+              required
+            />
+          </div>
+          <div class="mb-6">
+            <label
+              class="block text-gray-700 text-sm font-bold mb-2"
+              for="password"
+            >
+              Password
+            </label>
+            <input
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+              name="password"
+              type="password"
+              placeholder="******************"
+              required
+            />
+          </div>
+          <div class="flex items-center justify-between">
+            <button
+              class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              type="button"
+            >
+              Sign In
+            </button>
+            <button
+              class="flex border border-red-500 py-2 px-4 rounded items-center inline-block align-baseline font-bold text-sm text-red-500 hover:text-red-800"
+              onclick="redirectToHomepage()"
+            >
+              Cancel
+            </button>
+          </div>
+        </form>
+      </div>
+      <script>
+        function redirectToHomepage() {
+          window.location.href = "/";
+        }
+      </script>
     </div>
-
-    <script>
-      function redirectToHomepage() {
-        window.location.href = "/";
-      }
-    </script>
   </body>
 </html>

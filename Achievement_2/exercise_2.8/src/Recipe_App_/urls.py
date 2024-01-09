@@ -19,13 +19,14 @@ from django.urls import path
 from django.urls import include
 from django.conf import settings
 from django.conf.urls.static import static
-from .views import login_view, logout_view
+from .views import login_view, logout_view, recipes_home, about_view
 from django.views.generic import TemplateView
 
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", include("recipes.urls")),
+    path("home/", recipes_home, name="recipes_home"),
     path("login/", login_view, name="login"),
     path("logout/", logout_view, name="logout"),
     path(
@@ -33,6 +34,12 @@ urlpatterns = [
         TemplateView.as_view(template_name="recipes/success.html"),
         name="success",
     ),
+    path("__reload__/", include("django_browser_reload.urls", namespace="reload")),
+    path("about/", about_view, name="about"),
 ]
 
-urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+urlpatterns = (
+    urlpatterns
+    + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+)
