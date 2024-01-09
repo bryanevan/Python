@@ -40,3 +40,11 @@ class RecipeSearchForm(forms.Form):
                 "Please enter a recipe name or select an ingredient."
             )
         return cleaned_data
+
+
+class CreateRecipeForm(forms.Form):
+    name = forms.CharField(max_length=50)
+    cooking_time = forms.IntegerField(help_text="in minutes")
+    ingredients = forms.CharField(max_length=300)
+    rating = forms.FloatField(max_value=10)
+    # pic = forms.ImageField(required=False)

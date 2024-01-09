@@ -36,5 +36,9 @@ def about_view(request):
     return render(request, "recipes/about.html")
 
 
+def list_view(request):
+    return render(request, "recipes/recipes_list.html")
+
+
 def recipes_home(request):
     return render(request, "recipes/recipes_home.html")

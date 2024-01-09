@@ -19,7 +19,7 @@ from django.urls import path
 from django.urls import include
 from django.conf import settings
 from django.conf.urls.static import static
-from .views import login_view, logout_view, recipes_home, about_view
+from .views import login_view, logout_view, recipes_home, about_view, list_view
 from django.views.generic import TemplateView
 
 
