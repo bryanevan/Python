@@ -81,9 +81,9 @@
         </div>
         <script>
           document.querySelectorAll('.inline-block select').forEach(function (select) {
-              select.style.color = 'black';
+            select.style.color = 'black';
           });
-      </script>
+        </script>
         <button type="submit"
           class="px-2 py-2 font-bold text-white bg-blue-500 rounded hover:bg-blue-900 focus:outline-none focus:shadow-outline">
           Search
@@ -92,6 +92,11 @@
           class="px-2 py-2 font-bold text-white bg-blue-500 rounded hover:bg-blue-900 focus:outline-none focus:shadow-outline">
           Clear
         </button>
+        <a id="clearButton"
+          class="px-2 py-2 font-bold text-white bg-blue-500 rounded hover:bg-blue-900 focus:outline-none focus:shadow-outline"
+          href="{% url 'recipes:create' %}">
+          Add Recipe
+        </a>
         {% if form.data.Ingredients %}
         <a href="{% url 'recipes:export_csv' %}?Recipe_Name={{ form.data.Recipe_Name }}&Ingredients={{ form.data.Ingredients }}"
           class="px-2 py-2 ml-auto font-bold text-white bg-blue-500 rounded hover:bg-blue-900 focus:outline-none focus:shadow-outline">Export
@@ -125,8 +130,12 @@
       <li class="recipe-item">
         <a href="{{ recipe.get_absolute_url }}">
           <div class="recipe-image-container">
+            {% if recipe.pic %}
             <img class="recipe-image" src="{{ recipe.pic.url }}" alt="{{ recipe.title }}" />
-            <div class="recipe-title-overlay">{{ recipe.title }}</div>
+        {% else %}
+            <img class="recipe-image" src="/path/to/default/image.jpg" alt="{{ recipe.title }}" />
+        {% endif %}                        
+        <div class="recipe-title-overlay">{{ recipe.title }}</div>
           </div>
         </a>
       </li>

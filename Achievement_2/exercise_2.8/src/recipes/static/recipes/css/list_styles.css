@@ -78,25 +78,6 @@ h1 {
   margin-bottom: 20px;
 }
 
-/* CSS styling for the logout button */
-.logout-button {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  background-color: #d9534f;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  padding: 10px 20px;
-  font-size: 16px;
-  font-weight: 700;
-  cursor: pointer;
-}
-
-.logout-button:hover {
-  background-color: #c9302c;
-}
-
 /* CSS for the custom ingredient dropdown */
 .ingredient-dropdown {
   position: relative;

@@ -68,18 +68,17 @@
         </form>
         <img src="{{ object.pic.url }}" alt="{{ object.title }}" class="recipe-image" />
         <h2>{{ object.title }}:</h2>
-
         <p>{{ object.description }}</p>
-
+        <br>
         <p>Ingredients:</p>
         <ul>
           {% for ingredient in object.ingredients.all %}
           <li>{{ ingredient }}</li>
           {% endfor %}
         </ul>
-
+        <br>
         <p>Cooking Time: {{ object.cooking_time }} min</p>
-
+        <br>
         <p>Difficulty Level: {{ object.difficulty }}</p>
       </div>
     </div>

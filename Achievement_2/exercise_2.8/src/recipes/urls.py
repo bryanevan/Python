@@ -7,6 +7,7 @@ from .views import (
     export_single_recipe_csv,
     generate_chart,
     about_view,
+    create_view,
 )
 
 app_name = "recipes"
@@ -23,4 +24,5 @@ urlpatterns = [
         name="export_single_recipe_csv",
     ),
     path("about/", about_view, name="about"),
+    path("create/", create_view, name="create"),
 ]

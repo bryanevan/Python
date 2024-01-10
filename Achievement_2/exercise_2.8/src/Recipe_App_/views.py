@@ -42,3 +42,7 @@ def list_view(request):
 
 def recipes_home(request):
     return render(request, "recipes/recipes_home.html")
+
+
+def create_view(request):
+    return render(request, "recipes/create.html")

@@ -1,5 +1,8 @@
 from django import forms
 from .models import Ingredient
+from recipeingredients.models import RecipeIngredient
+from ingredients.models import Ingredient
+
 
 CHART_CHOICES = (
     ("#1", "Bar Chart"),
@@ -43,8 +46,19 @@ class RecipeSearchForm(forms.Form):
 
 
 class CreateRecipeForm(forms.Form):
-    name = forms.CharField(max_length=50)
-    cooking_time = forms.IntegerField(help_text="in minutes")
-    ingredients = forms.CharField(max_length=300)
-    rating = forms.FloatField(max_value=10)
-    # pic = forms.ImageField(required=False)
+    title = forms.CharField(
+        max_length=50, required=True, error_messages={"required": ""}
+    )
+    cooking_time = forms.IntegerField(
+        help_text="In minutes", required=True, error_messages={"required": ""}
+    )
+    description = forms.CharField(
+        widget=forms.Textarea, required=True, error_messages={"required": ""}
+    )
+    ingredients = forms.CharField(
+        widget=forms.Textarea,
+        required=True,
+        help_text="Enter each ingredient separated by a comma or a newline.",
+        error_messages={"required": ""},
+    )
+    pic = forms.ImageField(required=False)
