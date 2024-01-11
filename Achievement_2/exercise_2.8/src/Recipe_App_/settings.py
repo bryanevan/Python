@@ -30,7 +30,8 @@ SECRET_KEY = os.environ.get(
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    "https://secure-beyond-23975-0d5ed52d6bc7.herokuapp.com",
+    "https://glacial-refuge-41818-3e015d39f76f.herokuapp.com",
+    "https://git.heroku.com/glacial-refuge-41818.git",
     "127.0.0.1",
 ]
 
